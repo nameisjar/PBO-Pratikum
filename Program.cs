@@ -1,24 +1,7 @@
-﻿namespace Praktikum_1
+﻿namespace Inheritance
 {
-    internal class Program
-    {
-        
-        private static void Main(string[] args)
-        {
-            Mobil mobil1 = new Agya();
-            mobil1.ban = new Michelin();
-            mobil1.NyalakanMesin();
-            mobil1.MatikanMesin();
-            Mobil mobil2 = new Avanza();
-            mobil2.ban = new Bridgestone();
-            //mobil2.NyalakanLampu();
-            Civic civic1 = new Civic();
-            civic1.VtecKickedIn();
-            civic1.ban = new Bridgestone();
-        }
-    }
-}
 
+}
 class Ban
 {
     public string Merk;
@@ -150,5 +133,22 @@ class Avanza : Toyota
     public void NyalakanLampu()
     {
         Console.WriteLine($"Lampu mobil {this.Merk} bertipe {this.Tipe} menyala");
+    }
+    internal class Program
+    {
+
+        private static void Main(string[] args)
+        {
+            Mobil mobil1 = new Agya();
+            mobil1.ban = new Michelin();
+            mobil1.NyalakanMesin();
+            mobil1.MatikanMesin();
+            Mobil mobil2 = new Avanza();
+            mobil2.ban = new Bridgestone();
+            mobil2.NyalakanLampu();
+            Civic civic1 = new Civic();
+            civic1.VtecKickedIn();
+            civic1.ban = new Bridgestone();
+        }
     }
 }
